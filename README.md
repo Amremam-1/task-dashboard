@@ -14,3 +14,19 @@ The project structure is organized into:
 - **components** – reusable UI components
 - **pages** – main dashboard pages
 - **store** – Redux store and slices
+
+## Project Structure & Routing
+
+The project routing is organized using **React Router** and separated into two main layouts:
+
+- **Auth Layout**
+
+  - `/login`
+  - `/register`
+
+- **Dashboard Layout**
+  - `/dashboard` → Home page
+  - `/dashboard/table` → Data table with sorting, filtering, and pagination
+  - `/dashboard/charts` → Charts and analytics
+
+This structure helps keep authentication pages separated from the main dashboard while maintaining a scalable architecture.
