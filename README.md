@@ -30,3 +30,22 @@ The project routing is organized using **React Router** and separated into two m
   - `/dashboard/charts` → Charts and analytics
 
 This structure helps keep authentication pages separated from the main dashboard while maintaining a scalable architecture.
+
+## Authentication
+
+A login page was implemented using **React Hook Form** and **Zod** for form validation.
+
+### Features
+
+- Email validation
+- Password validation (minimum 6 characters)
+- Show/Hide password functionality
+- Disabled submit button until the form is valid
+- Navigation to the dashboard after successful login
+
+### Technologies Used
+
+- React Hook Form
+- Zod
+- Tailwind CSS
+- React Router
