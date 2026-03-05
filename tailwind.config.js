@@ -15,7 +15,6 @@ export default {
         accent: "#22C55E",
 
         background: "#F9FAFB",
-        surface: "#FFFFFF",
 
         sidebar: "#111827",
 
@@ -27,6 +26,10 @@ export default {
         danger: "#EF4444",
         warning: "#F59E0B",
         success: "#10B981",
+
+        card: "#FFFFFF",
+        input: "#F3F4F6",
+        hover: "#F1F5F9",
       },
     },
   },
