@@ -35,7 +35,7 @@ This structure helps keep authentication pages separated from the main dashboard
 
 A login page was implemented using **React Hook Form** and **Zod** for form validation.
 
-### Features
+## Features
 
 - Email validation
 - Password validation (minimum 6 characters)
@@ -49,3 +49,17 @@ A login page was implemented using **React Hook Form** and **Zod** for form vali
 - Zod
 - Tailwind CSS
 - React Router
+
+## Implemented Components 
+
+The following core UI components were created to build the dashboard layout:
+
+Navbar – Top navigation bar for the dashboard.
+
+DesktopSidebar – Sidebar navigation for desktop screens.
+
+MobileSidebar – Responsive sidebar for mobile devices.
+
+NavigationLinks – Reusable navigation links used inside the sidebar.
+
+DashboardLayout – Main layout that wraps all dashboard pages and includes the sidebar and navbar
