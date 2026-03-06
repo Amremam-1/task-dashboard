@@ -50,7 +50,7 @@ A login page was implemented using **React Hook Form** and **Zod** for form vali
 - Tailwind CSS
 - React Router
 
-## Implemented Components 
+## Implemented Components
 
 The following core UI components were created to build the dashboard layout:
 
@@ -63,3 +63,23 @@ MobileSidebar – Responsive sidebar for mobile devices.
 NavigationLinks – Reusable navigation links used inside the sidebar.
 
 DashboardLayout – Main layout that wraps all dashboard pages and includes the sidebar and navbar
+
+## Dashboard Home Page
+
+The dashboard home page was implemented to provide a quick overview of important metrics.
+
+### Features
+
+- Dashboard title and welcome message
+- Statistics cards displaying key metrics such as:
+  - Total Users
+  - Revenue
+  - Orders
+- Data visualization using charts
+
+### Charts
+
+Charts were implemented using **Recharts** to display dashboard analytics:
+
+- **Sales Chart** – Line chart showing sales performance over time
+- **Users Growth Chart** – Bar chart showing user growth by month
