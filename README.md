@@ -101,3 +101,10 @@ The following actions are available in the `tableSlice`:
 - **setSearchTerm** → updates the search input and resets the page to the first page
 - **nextPage** → moves to the next page in the table
 - **prevPage** → moves to the previous page
+
+### Export Table Data
+
+- PDF export using jsPDF and AutoTable
+- Excel export (XLSX) using SheetJS
+
+The export functionality is implemented using reusable utility functions.

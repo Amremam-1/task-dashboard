@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux"
 import SearchBtn from "../../components/SearchBtn"
 import { dashboardData } from "../../data/index"
-import { nextPage, prevPage } from "../../store/tabelSlice"
 import Pagination from "../../components/Pagination"
+import { FaFileDownload } from "react-icons/fa"
+import { downloadPDF, downloadExcel } from "../../utils/index"
+import BtnActions from "../../components/btnActions"
 
 const TableUser = () => {
   const searchTerm = useSelector((state) => state.table.searchTerm)
@@ -53,6 +55,7 @@ const TableUser = () => {
             ))}
           </tbody>
         </table>
+        <BtnActions filteredUsers={filteredUsers} />
       </div>
 
       {/* Pagination */}
