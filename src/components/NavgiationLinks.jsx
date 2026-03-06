@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 
 const navLinks = [
   { id: 1, title: "Dashboard", path: "/dashboard", icon: IoMdPerson },
-  { id: 2, title: "Users", path: "/dashboard/user", icon: MdOutlineInfo },
+  { id: 2, title: "Users", path: "/dashboard/users", icon: MdOutlineInfo },
 ]
 
 const NavgiationLinks = () => {

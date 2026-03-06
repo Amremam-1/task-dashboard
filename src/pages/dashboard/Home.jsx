@@ -10,22 +10,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts"
-
-const salesData = [
-  { name: "Jan", sales: 400 },
-  { name: "Feb", sales: 300 },
-  { name: "Mar", sales: 500 },
-  { name: "Apr", sales: 200 },
-  { name: "May", sales: 600 },
-]
-
-const usersData = [
-  { name: "Jan", users: 100 },
-  { name: "Feb", users: 200 },
-  { name: "Mar", users: 300 },
-  { name: "Apr", users: 250 },
-  { name: "May", users: 400 },
-]
+import { sales, salesData, usersData } from "../../data"
 
 const Home = () => {
   return (
@@ -41,19 +26,15 @@ const Home = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-card border border-borderColor shadow-sm rounded-xl p-5">
-          <h3 className="text-sm text-textSecondary mb-2.5">Total Users</h3>
-          <p className="text-2xl font-bold text-textPrimary">1,245</p>
-        </div>
-        <div className="bg-card border border-borderColor shadow-sm rounded-xl p-5">
-          <h3 className="text-sm text-textSecondary mb-2.5">Revenue</h3>
-          <p className="text-2xl font-bold text-textPrimary">$8,420</p>
-        </div>
-
-        <div className="bg-card border border-borderColor shadow-sm rounded-xl p-5">
-          <h3 className="text-sm text-textSecondary mb-2.5">Orders</h3>
-          <p className="text-2xl font-bold text-textPrimary">320</p>
-        </div>
+        {sales.map((item) => (
+          <div
+            key={item.num}
+            className="bg-card border border-borderColor shadow-sm rounded-xl p-5"
+          >
+            <h3 className="text-sm text-textSecondary mb-2.5">{item.title}</h3>
+            <p className="text-2xl font-bold text-textPrimary">{item.num}</p>
+          </div>
+        ))}
       </div>
 
       {/* Charts */}

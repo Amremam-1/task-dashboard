@@ -83,3 +83,21 @@ Charts were implemented using **Recharts** to display dashboard analytics:
 
 - **Sales Chart** – Line chart showing sales performance over time
 - **Users Growth Chart** – Bar chart showing user growth by month
+
+## State Management
+
+State management in the dashboard is handled using **Redux Toolkit**.
+
+A dedicated slice was created to manage the table state including:
+
+- **Search term** used to filter users
+- **Current page** for pagination
+- **Rows per page** to control the number of rows displayed in the table
+
+### Actions Implemented
+
+The following actions are available in the `tableSlice`:
+
+- **setSearchTerm** → updates the search input and resets the page to the first page
+- **nextPage** → moves to the next page in the table
+- **prevPage** → moves to the previous page
