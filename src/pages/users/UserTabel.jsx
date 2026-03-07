@@ -1,9 +1,7 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import SearchBtn from "../../components/SearchBtn"
 import { dashboardData } from "../../data/index"
 import Pagination from "../../components/Pagination"
-import { FaFileDownload } from "react-icons/fa"
-import { downloadPDF, downloadExcel } from "../../utils/index"
 import BtnActions from "../../components/btnActions"
 
 const TableUser = () => {
@@ -27,7 +25,7 @@ const TableUser = () => {
   return (
     <div className="bg-card p-6 rounded-xl shadow space-y-4">
       {/* Search */}
-      <SearchBtn data={dashboardData} />
+      <SearchBtn />
 
       {/* Table */}
       <div className="overflow-x-auto">
