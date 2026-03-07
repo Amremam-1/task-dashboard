@@ -1,6 +1,6 @@
 import { downloadExcel, downloadPDF } from "../utils"
 
-const BtnActions = ({ filteredUsers }) => {
+const ButtonActions = ({ filteredUsers }) => {
   return (
     <div className="flex gap-3 py-3">
       <button
@@ -20,4 +20,4 @@ const BtnActions = ({ filteredUsers }) => {
   )
 }
 
-export default BtnActions
+export default ButtonActions

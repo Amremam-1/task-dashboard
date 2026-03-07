@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import SearchBtn from "../../components/SearchBtn"
 import { dashboardData } from "../../data/index"
 import Pagination from "../../components/Pagination"
-import BtnActions from "../../components/btnActions"
+import ButtonActions from "../../components/ButtonActions"
 
 const TableUser = () => {
   const searchTerm = useSelector((state) => state.table.searchTerm)
@@ -53,7 +53,7 @@ const TableUser = () => {
             ))}
           </tbody>
         </table>
-        <BtnActions filteredUsers={filteredUsers} />
+        <ButtonActions filteredUsers={filteredUsers} />
       </div>
 
       {/* Pagination */}
