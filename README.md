@@ -108,3 +108,20 @@ The following actions are available in the `tableSlice`:
 - Excel export (XLSX) using SheetJS
 
 The export functionality is implemented using reusable utility functions.
+
+
+## Task Dashboard
+
+This project includes a simple authentication system using Firebase Authentication.
+
+Features
+
+User Login
+
+User Register
+
+Protected Dashboard Route
+
+Logout functionality
+
+Display logged-in user email in the navbar

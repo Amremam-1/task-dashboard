@@ -1,16 +1,18 @@
-import { createBrowserRouter } from "react-router-dom"
+import { Navigate, createBrowserRouter } from "react-router-dom"
 import AuthLayout from "../layout/AuthLayout"
 import DashboardLayout from "../layout/DashboardLayout"
 import Home from "../pages/dashboard/Home"
 import UsersTable from "../pages/users/UserTabel"
 import LoginPage from "../pages/Auth/LoginPage"
-import RegisterPage from "../pages/Auth/RegisterPAge"
+import RegisterPage from "../pages/Auth/RegisterPage"
+import ProtectedRoute from "./ProtectedRoute"
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <AuthLayout />,
     children: [
+      { index: true, element: <Navigate to="/login" /> },
       { path: "/login", element: <LoginPage /> },
       {
         path: "/register",
@@ -21,7 +23,11 @@ const router = createBrowserRouter([
 
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: (
+      <ProtectedRoute>
+        <DashboardLayout />
+      </ProtectedRoute>
+    ),
     children: [
       { index: true, element: <Home /> }, // dashboard main page
       { path: "users", element: <UsersTable /> }, // data table

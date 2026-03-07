@@ -1,9 +1,11 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { email, z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { FaEye, FaEyeSlash } from "react-icons/fa"
 import { useState } from "react"
+import { loginUser } from "../../utils/loginUser"
+import toast from "react-hot-toast"
 
 const schema = z.object({
   email: z.string().email("Please enter a valid email"),
@@ -23,13 +25,27 @@ const LoginPage = () => {
     resolver: zodResolver(schema),
   })
 
-  const onSubmit = (data) => {
-    console.log(data)
+  const onSubmit = async (data) => {
+    try {
+      const user = await loginUser(data.email, data.password)
 
-    // mock login success
-    navigate("/dashboard")
+      toast.success("Login successful 🎉")
 
-    reset()
+      navigate("/dashboard")
+      reset()
+    } catch (error) {
+      console.error(error)
+
+      if (error.code === "auth/user-not-found") {
+        toast.error("User not found. Please register first.")
+      } else if (error.code === "auth/wrong-password") {
+        toast.error("Incorrect password.")
+      } else if (error.code === "auth/invalid-email") {
+        toast.error("Invalid email format.")
+      } else {
+        toast.error("Login failed. Please try again.")
+      }
+    }
   }
 
   return (

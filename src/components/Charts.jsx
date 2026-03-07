@@ -10,6 +10,8 @@ import {
   ResponsiveContainer,
 } from "recharts"
 import { salesData, usersData } from "../data"
+
+
 const Charts = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
