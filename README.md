@@ -2,6 +2,11 @@
 
 This project is a responsive dashboard built using **React (Vite)**, **Tailwind CSS**, and **Redux Toolkit**.
 
+
+## Application here:
+
+https://task-dashboard-chi-steel.vercel.app
+
 ## Implementation Approach
 
 The project was initialized using **Vite** for fast development and build performance.  
