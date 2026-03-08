@@ -109,7 +109,6 @@ The following actions are available in the `tableSlice`:
 
 The export functionality is implemented using reusable utility functions.
 
-
 ## Task Dashboard
 
 This project includes a simple authentication system using Firebase Authentication.
@@ -125,3 +124,61 @@ Protected Dashboard Route
 Logout functionality
 
 Display logged-in user email in the navbar
+
+## 🐳 Run with Docker
+
+### 1. Build the Docker image
+
+```bash
+docker build -t task-dashboard .
+```
+
+### 2. Run the container
+
+```bash
+docker run -d -p 5173:5173 --name task-dashboard task-dashboard
+```
+
+The application will be available at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## ▶️ Start / Stop the container
+
+If the container already exists, you don't need to run it again.
+
+Start the container:
+
+```bash
+docker start task-dashboard
+```
+
+Stop the container:
+
+```bash
+docker stop task-dashboard
+```
+
+---
+
+## 📜 View container logs
+
+If you want to see the server logs inside Docker:
+
+```bash
+docker logs task-dashboard
+```
+
+---
+
+## 🔍 Check running containers
+
+To see running containers:
+
+```bash
+docker ps
+```
